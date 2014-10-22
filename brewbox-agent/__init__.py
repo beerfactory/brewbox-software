@@ -15,25 +15,4 @@
 # You should have received a copy of the GNU General Public License
 # along with Brewbox.  If not, see <http://www.gnu.org/licenses/>.
 
-
-import sys
-import os
-
-from setuptools import setup, find_packages
-
-here = os.path.dirname(os.path.realpath(__file__))
-sys.path.insert(0, os.path.normpath(os.path.join(here, 'brewbox', 'agent')))
-
-import packageinfo
-
-setup(
-    name="brewbox-agent",
-    version=packageinfo.version,
-    description="Brewbox agent package for managing brewbox hardware I/O board",
-    url="https://github.com/beerfactory/brewbox-agent",
-    license='GPLv3',
-    packages=find_packages(exclude=['tests']),
-    classifiers=[
-    ],
-    requires=[]
-)
+__import__('pkg_resources').declare_namespace(__name__)
