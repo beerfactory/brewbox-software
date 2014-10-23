@@ -47,7 +47,7 @@ def _get_git_changeset():
 def _get_version(version):
     "Returns a PEP 386-compliant version number from VERSION."
 
-    # Bbuild the two parts of the version number:
+    # Build the two parts of the version number:
     # main = X.Y[.Z]
     # sub = .devN - for pre-alpha releases
     # | {a|b|c}N - for alpha, beta and rc releases
