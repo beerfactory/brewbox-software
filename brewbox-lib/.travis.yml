@@ -1,0 +1,9 @@
+language: python
+python:
+    - "3.4"
+install:
+    - "pip install -r requirements.txt --use-mirrors"
+    - "pip install coverage"
+    - "pip install coveralls"
+after_success:
+    coveralls
