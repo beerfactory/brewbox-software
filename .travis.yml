@@ -6,10 +6,6 @@ install:
     - "pip install coverage"
     - "pip install coveralls"
 script:
-    - cd brewbox-lib
-    - py.test
-    - cd ..
-    - cd brewbox-agent
     - py.test
 after_success:
     coveralls
