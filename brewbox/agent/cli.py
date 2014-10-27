@@ -15,26 +15,15 @@
 # You should have received a copy of the GNU General Public License
 # along with Brewbox.  If not, see <http://www.gnu.org/licenses/>.
 
-import sys
-import os
+import click
 
-from setuptools import setup, find_packages
 
-from brewbox import version_info
+@click.group()
+@click.version_option()
+def cli():
+    """pass"""
 
-setup(
-    name="brewbox",
-    version=version_info,
-    description="Brewbox package",
-    url="https://github.com/beerfactory/brewbox-software",
-    license='GPLv3',
-    packages=find_packages(exclude=['tests']),
-    classifiers=[
-    ],
-    requires=[],
-    entry_points={
-        'console_scripts': [
-            'brewbox-agent = brewbox.agent.cli:cli',
-            ]
-        }
-)
+
+@cli.command()
+def status():
+    click.echo("Agent status")
